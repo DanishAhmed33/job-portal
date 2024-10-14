@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Jobs</title>
+     <!-- Link to the CSS file -->
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fffcfc;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #ffffff;
+            margin: 0px;
+            padding-top: 2px;
+            padding-bottom:2px;
+            text-decoration: solid;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: static;
+        }
+
+        /* Navigation Links Styling */
+        nav {
+            /*margin-top: 50px;*/
+            background-color: #222;
+
+            padding: 40px;
+        }
+
+        nav a {
+
+            border-radius: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: 0 20px;
+            color: #f9f9f9;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Hover effect for the links */
+        nav a:hover {
+            color: #ffffff;
+            text-decoration: none;
+            ;
+        }
+
+        nav a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #00ffae;
+            transition: width 0.3s;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Responsiveness for smaller screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+                font-size: 1.1em;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            /* Change color to make it stand out against the background */
+            font-size: 18px;
+            /* Adjust font size if needed */
+        }
+
+        a:hover {
+            text-decoration: underline;
+            /* Optional: Add underline on hover */
+            text-shadow: violet;
+            /* cursor:; */
+
+        }
+
+        /* Container styling */
+        
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .job-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .job-item:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-id {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .job-company {
+            font-size: 16px;
+            color: #007bff;
+        }
+
+        .job-description {
+            font-size: 14px;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .job-details {
+            font-size: 14px;
+            color: #333;
+        }
+       
+
+
+        main {
+            overflow-y: scroll;
+            width: 75%;
+            background-color: #1a1a1a;
+            /* Dark background for contrast */
+            color: #fffbfb;
+            /* Gold text color */
+            padding: 0px 50px 5px 50px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            margin-left: 9%;
+
+            
+            
+            height: 68vh;
+            /* Limit content width for better readability */
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2em;
+            line-height: 1.8;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            /* Subtle shadow for a 3D effect */
+            text-align: center;
+        }
+
+        /* Bold styling for key parts */
+        main strong {
+            color: #00aaff;
+            font-weight: bold;
+        }
+
+        
+        /* Paragraph Spacing */
+        
+
+        /* Join Us Button */
+    
+
+
+
+        footer {
+            background-color: #222;
+            color: #fefefe;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9em;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0;
+        }
+
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-links a {
+            color: #fffefb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .footer-links li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/jobs">View Jobs Listing</a>
+            <a href="/post-job">Post a Job</a>
+            <a href="/apply-job">Apply for a Job</a>
+            <a href="/job-status">Check Application Status</a>
+            <a href="/register-candidate">Candidate</a>
+            <a href="/register-employer">Employer</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Available Jobs</h1>
+        <ul class="scroll">
+            {% for job in jobs %}
+            <li class="job-item">
+                <div class="job-id">Job ID: <strong>{{ job[0] }}</strong></div>
+                <div class="job-title">{{ job[1] }}</div>
+                <div class="job-company">at {{ job[3] }}</div>
+                <div class="job-description">{{ job[2] }}</div>
+                <div class="job-details">
+                    Location: {{ job[4] }} | Salary: ${{ job[5] }}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Job Portal. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

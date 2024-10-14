@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employer Applications</title>
+</head>
+<body>
+    <h2>Applications for Your Jobs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Candidate Name</th>
+                <th>Job Title</th>
+                <th>Status</th>
+                <th>Update Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for application in applications %}
+            <tr>
+                <td>{{ application[1] }}</td>
+                <td>{{ application[2] }}</td>
+                <td>{{ application[3] }}</td>
+                <td>
+                    <form action="/update-application-status" method="post">
+                        <input type="hidden" name="application_id" value="{{ application[0] }}">
+                        <select name="status">
+                            <option value="pending" {% if application[3] == 'pending' %}selected{% endif %}>Pending</option>
+                            <option value="hired" {% if application[3] == 'hired' %}selected{% endif %}>Hired</option>
+                            <option value="rejected" {% if application[3] == 'rejected' %}selected{% endif %}>Rejected</option>
+                        </select>
+                        <button type="submit">Update</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

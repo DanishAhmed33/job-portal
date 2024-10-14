@@ -1,0 +1,164 @@
+/* Styling for the job listings page */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e2e2e2 0%, #ffffff 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 28px;
+    color: blue;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.job-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.job-item:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-id {
+    font-size: 14px;
+    color: #666;
+}
+
+.job-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.job-company {
+    font-size: 16px;
+    color: #555;
+}
+
+.job-description {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.job-details {
+    font-size: 14px;
+    color: #444;
+}
+
+
+
+
+/* Container styling */
+.container1 {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+    gap: 10px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    /* transform: translateZ(2px); */
+}
+
+button i {
+    font-size: 18px;
+}
+
+a:hover{
+    transform: translateY(-2px);
+}
+
