@@ -9,7 +9,7 @@ app.secret_key = 'your_secret_key'
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="Danahm@7863",
+    passwd="PASSWORD",
     database="job_portal"
 )
 cursor = db.cursor()
